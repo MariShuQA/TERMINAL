@@ -1,0 +1,91 @@
+Первое ДЗ 
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я
+	pwd
+
+2) Создать папку
+	mkdir folder
+
+3) Зайти в папку
+	cd folder
+
+4) Создать 3 папки
+	mkdir dir1 dir2 dir3
+
+5) Зайти в любоую папку
+	cd dir1
+
+6) Создать 5 файлов (3 txt, 2 json)
+	touch one.txt two.txt three.txt one.json two.json
+
+7) Создать 3 папки
+	mkdir fold1 fold2 fold3
+
+8. Вывести список содержимого папки
+	ls -l
+9) + Открыть любой txt файл
+	cat one.txt
+
+10) + написать туда что-нибудь, любой текст.
+	cat >> one.txt
+	one
+	two
+	three
+11) + сохранить и выйти.
+	ctrl + C
+12) Выйти из папки на уровень выше
+	 cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+	mv one.txt ../dir2/
+	mv one.json ../dir2/
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+	cp two.txt ../dir2/
+	cp two.json ../dir2/
+15) Найти файл по имени
+	find . -name "two*"
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+	tail -f three.txt
+	grep - Ищет текст по заданному шаблону
+
+17) вывести несколько первых строк из текстового файла
+	head -n3 <fail>
+18) вывести несколько последних строк из текстового файла
+	tail –n3 <fail>
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+	less для облегчения просмотра больших текстов, не умещающихся на одном экране эмулятора терминала.
+20) вывести дату и время
+	date
+	date +"%H:%M %d/%m/%Y"
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+	curl "http://162.55.220.72:5006/terminal-hw-request"
+	curl "http://162.55.220.72:5005/get_method?name=Marina&age=37"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+$ cat > script.sh
+#!/bin/bash
+cd /d/Ксендзов35/HW_1terminal/folder
+mkdir dir1 dir2 dir3
+cd dir1
+touch one.txt two.txt three.txt one.json two.json
+mkdir fold1 fold2 fold3
+ls -l 
+mv one.txt ../dir2/
+mv one.json ../dir2/
+ctrl+C
+
+chmod + x script.sh
+Запустить скрипт ./script.sh
+
+=====================
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir foldername
+3) Зайти в папку - cd foldername
